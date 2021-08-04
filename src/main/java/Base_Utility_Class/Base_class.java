@@ -17,11 +17,12 @@ public class Base_class {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		
-		System.setProperty("webdriver.driver.chrome", "C:\\Users\\acer\\git\\KiteZerodhaWithTeam\\Browser\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\KiteMavenProjectWithTeam\\Browser\\chromedriver.exe");
 		driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
 		driver.get(Utility_class.ReadDatafile("URL"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		
 		
 	}
 	

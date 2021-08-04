@@ -20,7 +20,7 @@ public class Utility_class {
 	public static String ReadDatafile(String key) throws IOException
 	{
 		Properties prop = new Properties();
-		FileInputStream file = new FileInputStream("C:\\Users\\acer\\git\\KiteZerodhaWithTeam\\prop.properties");
+		FileInputStream file = new FileInputStream("C:\\Users\\Admin\\KiteMavenProjectWithTeam\\prop.properties");
 		prop.load(file);
 		String value = prop.getProperty(key);
 		return value;
@@ -41,6 +41,7 @@ public class Utility_class {
 		FileHandler.copy(src, dest);	
 		
 	}
+
 	
 	
 		

@@ -7,7 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class loginHomepage_POM 
 {
-@FindBy(xpath="//span[text()='DV1510']") private WebElement UserID;	
+	@FindBy(xpath="//span[text()='DV1510']") private WebElement UserID;	
+	@FindBy(xpath="//span[text() = 'Funds']") private WebElement fundsTab;	
 	
 	//step 2:initialization
 	public loginHomepage_POM(WebDriver driver)
@@ -20,6 +21,14 @@ public class loginHomepage_POM
 	{
 		String actText=UserID.getText();
 	    return actText;
+	}
+	
+	public void clickKiteHomePageUserID() {
+		UserID.click();
+	}
+	
+	public void clickKiteHomePageFundsTab() {
+		fundsTab.click();
 	}
 
 }
