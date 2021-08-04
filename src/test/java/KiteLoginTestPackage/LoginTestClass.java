@@ -87,11 +87,6 @@ public class LoginTestClass extends Base_class {
 		
 	}
 	
-	@Test(enabled = false)
-	public void SkipTest() {
-		Assert.fail();
-	}
-	
 	
 	@AfterMethod
 	public void Kite_Logout_And_Refresh_Method() {
@@ -107,7 +102,7 @@ public class LoginTestClass extends Base_class {
 	@AfterClass
 	public void Close_Set_Up() {
 		extent.flush();
-		driver.quit();
+		driver.close();
 		
 	}
 
